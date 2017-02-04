@@ -55,9 +55,9 @@ public class Sequence2 {
 		sequenceSelector.returnSeq().add(w1);
 		sequenceSelector.returnSeq().add(w2);
 		sequenceSelector.returnSeq().add(w3);
-//		message.add(w1);
-//		message.add(w2);
-//		message.add(w3);
+		message.add(w1);
+		message.add(w2);
+		message.add(w3);
 		Selector sel = message.selector();
 		while(!sel.end()) {
 			System.out.print(sel.current() + " ");
