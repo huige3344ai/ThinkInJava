@@ -11,9 +11,6 @@ abstract class Event {
     public void start(){
         eventTime=System.nanoTime()+delayTime;
     }
-    public void stop(){
-        eventTime=-1;
-    }
 
     public  boolean ready(){
         if (eventTime>0&&System.nanoTime()>=eventTime) return true;

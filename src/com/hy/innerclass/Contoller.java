@@ -12,15 +12,16 @@ public class Contoller {
     }
     public void run(){
         while (eventArrayList.size()>0){
-            for (Event event:
-                 eventArrayList) {
-                if (event.ready()){
-                    System.out.printf(event.toString());
-                    event.action();
-                    eventArrayList.remove(event);
+            eventArrayList.forEach(
+                    event -> {
+                        if (event.ready()){
+                            event.action();
+                            System.out.println("Off "+event.toString());
+                            eventArrayList.remove(event);
+                        }
+                    }
+            );
 
-                }
-            }
         }
     }
 }
